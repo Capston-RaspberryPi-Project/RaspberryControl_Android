@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "RaspberryControl_"
+rootProject.name = "RaspberryControl"
