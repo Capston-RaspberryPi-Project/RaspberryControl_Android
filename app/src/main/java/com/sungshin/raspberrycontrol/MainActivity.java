@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         sw5 = (Switch)findViewById(R.id.switch5);
         sw6 = (Switch)findViewById(R.id.switch6);
         btnGet = (Button)findViewById(R.id.getBtn);
+
         btnGet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
