@@ -6,21 +6,22 @@ import android.widget.Button;
 import android.widget.Switch;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 public class MainActivity extends AppCompatActivity {
-    private Switch sw1,sw2,sw3,sw4,sw5,sw6;
+    private SwitchCompat sw1,sw2,sw3,sw4,sw5,sw6;
     private  Button btnGet;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        sw1 = (Switch)findViewById(R.id.switch1);
-        sw2 = (Switch)findViewById(R.id.switch2);
-        sw3 = (Switch)findViewById(R.id.switch3);
-        sw4 = (Switch)findViewById(R.id.switch4);
-        sw5 = (Switch)findViewById(R.id.switch5);
-        sw6 = (Switch)findViewById(R.id.switch6);
+        sw1 = (SwitchCompat)findViewById(R.id.switch1);
+        sw2 = (SwitchCompat)findViewById(R.id.switch2);
+        sw3 = (SwitchCompat)findViewById(R.id.switch3);
+        sw4 = (SwitchCompat)findViewById(R.id.switch4);
+        sw5 = (SwitchCompat)findViewById(R.id.switch5);
+        sw6 = (SwitchCompat)findViewById(R.id.switch6);
         btnGet = (Button)findViewById(R.id.getBtn);
 
         btnGet.setOnClickListener(new View.OnClickListener() {

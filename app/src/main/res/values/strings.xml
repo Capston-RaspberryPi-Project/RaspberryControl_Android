@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RaspberryControl</string>
+    <string name="switch_1">Switch 1</string>
+    <string name="off">OFF</string>
+    <string name="switch_2">Switch 2</string>
+    <string name="on">ON</string>
 </resources>
