@@ -10,7 +10,6 @@
         android:id="@+id/text01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
         android:layout_marginLeft="88dp"
         android:layout_marginTop="50dp"
         android:padding="5dp"
@@ -23,8 +22,7 @@
         android:id="@+id/text02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="248dp"
-        android:layout_marginLeft="248dp"
+        android:layout_marginLeft="252dp"
         android:layout_marginTop="50dp"
         android:padding="5dp"
         android:text="잘 때"
@@ -36,10 +34,9 @@
         android:id="@+id/cg_real"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
         android:layout_marginLeft="88dp"
         android:layout_marginTop="130dp"
-        app:chipSpacingVertical="8dp"
+        app:chipSpacingVertical="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:singleSelection="true">
@@ -137,16 +134,95 @@
 
     </com.google.android.material.chip.ChipGroup>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="140dp"
+            android:padding="5dp"
+            android:text="tab1"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="196dp"
+            android:padding="5dp"
+            android:text="tab2"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="260dp"
+            android:padding="5dp"
+            android:text="tab3"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="316dp"
+            android:padding="5dp"
+            android:text="tab4"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="376dp"
+            android:padding="5dp"
+            android:text="tab5"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="436dp"
+            android:padding="5dp"
+            android:text="tab6"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/cg_set"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="248dp"
         android:layout_marginLeft="248dp"
         android:layout_marginTop="130dp"
-        app:chipBackgroundColor="@color/custom_chip_defalut_color"
-        app:chipSpacingVertical="8dp"
+        app:chipSpacingVertical="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:singleSelection="true">
