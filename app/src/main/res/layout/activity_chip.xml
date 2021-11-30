@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <TextView
+        android:id="@+id/text01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="50dp"
+        android:padding="5dp"
+        android:text="실시간"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="252dp"
+        android:layout_marginTop="50dp"
+        android:padding="5dp"
+        android:text="잘 때"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/cg_real"
-        android:layout_width="150dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="130dp"
+        app:chipSpacingVertical="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:singleSelection="true">
@@ -17,28 +46,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="01"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
-            app:checkedIconVisible="false"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
-            app:chipStrokeWidth="1dp"/>
+            app:chipStrokeColor="#F3BDBD"
+            app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/ch_real_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="02"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -46,13 +76,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="03"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -60,13 +91,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="04"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -74,13 +106,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="05"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -88,25 +121,108 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="06"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
 
     </com.google.android.material.chip.ChipGroup>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="140dp"
+            android:padding="5dp"
+            android:text="tab1"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="196dp"
+            android:padding="5dp"
+            android:text="tab2"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="260dp"
+            android:padding="5dp"
+            android:text="tab3"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="316dp"
+            android:padding="5dp"
+            android:text="tab4"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="376dp"
+            android:padding="5dp"
+            android:text="tab5"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tab6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginLeft="192dp"
+            android:layout_marginTop="436dp"
+            android:padding="5dp"
+            android:text="tab6"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/cg_set"
-        android:layout_width="150dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="200dp"
+        android:layout_marginLeft="248dp"
+        android:layout_marginTop="130dp"
+        app:chipSpacingVertical="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:singleSelection="true">
@@ -116,13 +232,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="01"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -130,13 +247,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="02"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -144,13 +262,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="03"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -158,13 +277,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="04"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -172,13 +292,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="05"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
         <com.google.android.material.chip.Chip
@@ -186,16 +307,43 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="06"
             android:textAlignment="center"
             android:textColor="@color/selector_chip_text"
             app:chipBackgroundColor="@color/selector_chip_background"
             app:chipEndPadding="24dp"
             app:chipMinHeight="39dp"
             app:chipStartPadding="24dp"
-            app:chipStrokeColor="#FFBAA3"
+            app:chipStrokeColor="#F3BDBD"
             app:chipStrokeWidth="1dp" />
 
 
     </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:id="@+id/getBtn1"
+        android:layout_width="240dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="110dp"
+        android:text="전체 전원 on"
+        app:backgroundTint="#F3BDBD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/getBtn2"
+        android:layout_width="240dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:text="전체 전원 Off"
+        app:backgroundTint="#F3BDBD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
