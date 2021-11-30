@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
@@ -17,14 +18,11 @@ import com.google.android.material.chip.ChipGroup;
 import java.util.List;
 
 public class ChipActivity extends AppCompatActivity {
-    private static String SERVER_IP = "220.69.172.156";
-    private int port = 8080;
 
-    Chip[] chip_real_list;
-    Chip[] chip_set_list;
-    SendSetting send;
-    String real_list;
-    String set_list;
+    Chip[] chip_real_list, chip_set_list;
+    String real_list, set_list;
+    SendSetting sendSetting;
+    Button btn_all_on, btn_all_off;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +31,6 @@ public class ChipActivity extends AppCompatActivity {
 
         varInit();          // findViewById
         initListener();
-
 
         /** 꼭 읽어주세요!  (효림)
          *
@@ -60,19 +57,14 @@ public class ChipActivity extends AppCompatActivity {
 
         Log.d("chip_real_list", real_list);
         Log.d("chip_set_list ", set_list);
+    }
 
-
-        // 일단은 졸음 감지 전이므로 real_list만 넘기는 것부터 할게 !
-        send = new SendSetting();
-        send.execute(real_list); // r010010
-
-//        send2 = new SendSetting();
-//        send2.excute(set_list); // s000100
-
-        //send.execute(set_list);
-
-        real_list="";
-        set_list="";
+    void sendToServer(String str){
+        sendSetting = new SendSetting();
+        String send = null;
+        if (str.equals("r")) { send = "r" + real_list;}
+        if (str.equals("s")) { send = "s" + set_list ;}
+        sendSetting.execute(send);
     }
 
     void initListener() {
@@ -81,14 +73,40 @@ public class ChipActivity extends AppCompatActivity {
             chip_real_list[i].setOnClickListener(v -> {
                 chip_real_list[finalI].setSelected(!chip_real_list[finalI].isSelected());
                 checkSelected();
+                sendToServer("r");
             });
 
             chip_set_list[i].setOnClickListener(v -> {
                 chip_set_list[finalI].setSelected(!chip_set_list[finalI].isSelected());     // isSelected 상태 토글
                 chip_real_list[finalI].setSelected(chip_set_list[finalI].isSelected());     // real 을 set 값으로 바꿈
                 checkSelected();
+                sendToServer("s");
+                sendToServer("r");
             });
         }
+
+        btn_all_on.setOnClickListener(v -> {
+            makeRealAllOn();
+            sendToServer("r");
+        });
+
+        btn_all_off.setOnClickListener(v -> {
+            makeRealAllOff();
+            sendToServer("r");
+        });
+
+    }
+
+    void makeRealAllOn(){
+        for (int i = 0 ; i< 6; i++)
+            chip_real_list[i].setSelected(true);
+        real_list = "111111";
+    }
+
+    void makeRealAllOff(){
+        for (int i = 0 ; i< 6; i++)
+            chip_real_list[i].setSelected(false);
+        real_list = "000000";
     }
 
     void varInit() {
@@ -99,6 +117,8 @@ public class ChipActivity extends AppCompatActivity {
             chip_real_list[i] = (Chip) findViewById(getResources().getIdentifier("ch_real_" + i, "id", getPackageName()));
             chip_set_list[i] = (Chip) findViewById(getResources().getIdentifier("ch_set_" + i, "id", getPackageName()));
         }
+        btn_all_on = findViewById(R.id.btn_all_on);
+        btn_all_off = findViewById(R.id.btn_all_off);
     }
 
 }
