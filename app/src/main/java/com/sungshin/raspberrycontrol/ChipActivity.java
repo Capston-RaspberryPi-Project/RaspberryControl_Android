@@ -23,7 +23,6 @@ public class ChipActivity extends AppCompatActivity {
 
     private Chip[] chip_real_list, chip_set_list;
     private String real_list, set_list;
-    private SendSetting sendSetting;
     private Button btn_all_on, btn_all_off;
     private SharedPreferences pref;
     private SharedPreferences.Editor editor;
@@ -84,7 +83,7 @@ public class ChipActivity extends AppCompatActivity {
     }
 
     void sendToServer(String str) {
-        sendSetting = new SendSetting();
+        SendSetting sendSetting = new SendSetting();
         String send = null;
         if (str.equals("r"))
             send = "r" + real_list;
