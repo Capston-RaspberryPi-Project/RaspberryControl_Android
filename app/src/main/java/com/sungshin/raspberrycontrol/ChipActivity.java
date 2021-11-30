@@ -1,23 +1,13 @@
 package com.sungshin.raspberrycontrol;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.chip.Chip;
-import com.google.android.material.chip.ChipGroup;
-
-import java.util.List;
 
 public class ChipActivity extends AppCompatActivity {
 
@@ -45,7 +35,7 @@ public class ChipActivity extends AppCompatActivity {
         editor.putString("real", real_list)
                 .putString("set", set_list)
                 .commit();
-        Log.d("pref::", "onDestroy : " + real_list + ", " + set_list);
+        // Log.d("pref::", "onDestroy : " + real_list + ", " + set_list);
     }
 
     void setPreference() {
@@ -60,7 +50,7 @@ public class ChipActivity extends AppCompatActivity {
             chip_set_list[i].setSelected(tmp);
         }
 
-        Log.d("pref::", "onCreate : " + real_list + ", " + set_list);
+        // Log.d("pref::", "onCreate : " + real_list + ", " + set_list);
     }
 
     void checkSelected() {
@@ -78,8 +68,8 @@ public class ChipActivity extends AppCompatActivity {
         real_list = String.valueOf(real);
         set_list = String.valueOf(set);
 
-        Log.d("chip_real_list", real_list);
-        Log.d("chip_set_list ", set_list);
+        // Log.d("chip_real_list", real_list);
+        // Log.d("chip_set_list ", set_list);
     }
 
     void sendToServer(String str) {
@@ -103,10 +93,10 @@ public class ChipActivity extends AppCompatActivity {
 
             chip_set_list[i].setOnClickListener(v -> {
                 chip_set_list[finalI].setSelected(!chip_set_list[finalI].isSelected());     // isSelected 상태 토글
-                chip_real_list[finalI].setSelected(chip_set_list[finalI].isSelected());     // real 을 set 값으로 바꿈
+//                chip_real_list[finalI].setSelected(chip_set_list[finalI].isSelected());     // real 을 set 값으로 바꿈
                 checkSelected();
                 sendToServer("s");
-                sendToServer("r");
+//                sendToServer("r");
             });
         }
 
