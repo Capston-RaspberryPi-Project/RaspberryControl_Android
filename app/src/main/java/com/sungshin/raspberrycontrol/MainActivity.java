@@ -23,10 +23,10 @@ import java.net.UnknownHostException;
 public class MainActivity extends AppCompatActivity {
     private SwitchCompat sw1, sw2, sw3, sw4, sw5, sw6;
     private Button btnGet;
-    private static String SERVER_IP = "220.69.172.43";
+    private static String SERVER_IP = "220.69.172.156";
     private int port = 8080;
     String settingText;
-    SendSetting sendSetting;
+    //SendSetting sendSetting;
 
 
     @Override
