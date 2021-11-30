@@ -32,12 +32,6 @@ public class ChipActivity extends AppCompatActivity {
         varInit();          // findViewById
         initListener();
 
-        /** 꼭 읽어주세요!  (효림)
-         *
-         * 버튼 색깔은 클릭할때마다 내부적으로 자동 바뀜
-         * chip 클릭마다 40 line 의 CheckSelected() 가 작동
-         * 51, 52 line에서 처럼 real, set이 스위치 정보를 담고 있음.
-         * */
     }
 
     void checkSelected() {
