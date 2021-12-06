@@ -14,7 +14,7 @@ public class SendSetting extends AsyncTask {
     protected Object doInBackground(Object[] objects) {
 
         try {
-            Socket socket = new Socket("220.69.172.156", 8080);
+            Socket socket = new Socket("220.69.172.48", 8080);
             PrintWriter outToServer = new PrintWriter(
                     new OutputStreamWriter(
                             socket.getOutputStream()));
