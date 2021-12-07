@@ -3,6 +3,7 @@ package com.sungshin.raspberrycontrol;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +14,7 @@ public class ChipActivity extends AppCompatActivity {
 
     private Chip[] chip_real_list, chip_set_list;
     private String real_list, set_list;
-    private Button btn_all_on, btn_all_off;
+    private Button btn_all_on, btn_all_off, btn_send;
     private SharedPreferences pref;
     private SharedPreferences.Editor editor;
 
@@ -95,7 +96,7 @@ public class ChipActivity extends AppCompatActivity {
                 chip_set_list[finalI].setSelected(!chip_set_list[finalI].isSelected());     // isSelected 상태 토글
 //                chip_real_list[finalI].setSelected(chip_set_list[finalI].isSelected());     // real 을 set 값으로 바꿈
                 checkSelected();
-                sendToServer("s");
+//                sendToServer("s");
 //                sendToServer("r");
             });
         }
@@ -114,6 +115,8 @@ public class ChipActivity extends AppCompatActivity {
             sendToServer("r");
         });
 
+        btn_send.setOnClickListener(v -> sendToServer("s"));
+
     }
 
     void varInit() {
@@ -126,6 +129,7 @@ public class ChipActivity extends AppCompatActivity {
         }
         btn_all_on = findViewById(R.id.btn_all_on);
         btn_all_off = findViewById(R.id.btn_all_off);
+        btn_send = findViewById(R.id.btn_send);
 
         pref = getSharedPreferences("pref", MODE_PRIVATE);
         editor = pref.edit();
